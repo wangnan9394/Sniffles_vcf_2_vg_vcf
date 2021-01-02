@@ -25,4 +25,8 @@ Three step
 python Sniffles_vcf_2_vg_vcf.py -i VCF -g GENOME
 ```
 ### outputs
-In a workdir "name", *.normal.sort.reduce.vcf is the final vcf, for a further analysis.
+In a workdir "name",
+```
+*.normal.sort.reduce.vcf
+```
+is the final vcf, for a further analysis.
