@@ -11,16 +11,16 @@ environment：
 ### sniffles <https://github.com/fritzsedlazeck/Sniffles>
 ## steps
 ### preparation of input
-One step
+mapping
 ```
 ngmlr -t 8 -r GENOME -q FASTA -o SAM
 samtools sort -O BAM -@ 20 -o BAM SAM &
 ```
-Two step
+calling
 ```
 sniffles -t 8 -m BAM -v VCF
 ```
-Three step
+# obatin output from Sniffles and filter with read by vg input
 ```
 python Sniffles_vcf_2_vg_vcf.py -i VCF -g GENOME
 ```
