@@ -5,10 +5,10 @@ get PAVs in your genome from pacbio_mapping_vcf(NGMLR+Sniffles), and merge the v
 ## dependencies
 environment：
 ### path.os
-### vg
-### samtools
-### ngmlr
-### sniffles
+### vg <https://github.com/vgteam/vg>
+### samtools <https://github.com/samtools/samtools>
+### ngmlr <https://github.com/philres/ngmlr>
+### sniffles <https://github.com/fritzsedlazeck/Sniffles>
 ## steps
 ### preparation of input
 One step
