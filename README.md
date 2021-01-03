@@ -25,11 +25,11 @@ sniffles -t 8 -m BAM -v VCF
 python Sniffles_vcf_2_vg_vcf.py -i VCF -g GENOME -p all/noraml/sort/clear -tmp 0/1
 ```
 ### outputs
--tmp 0:local dir
--tmp 1:In a workdir "name"
--p all noraml+sort+clear
--p normal only normal
--p sort only sort(including reduce)
+-tmp 0:local dir \
+-tmp 1:In a workdir "name" \
+-p all noraml+sort+clear \
+-p normal only normal \
+-p sort only sort(including reduce) \
 -p clear only clear
 ```
 *.normal.sort.reduce.vcf
