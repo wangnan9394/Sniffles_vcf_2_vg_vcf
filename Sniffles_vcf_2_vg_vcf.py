@@ -2,13 +2,13 @@ import os
 import argparse
 
 parser = argparse.ArgumentParser(description = 'input ngmlr_vcf, output vg validation vcf', add_help = False, \
-    usage = ' -i [input.vcf] -g [genome name] -p [process] -t [tmp]：-p all,normal,sort,check, default=all>')
+    usage = ' -i [input.vcf] -g [genome name] <-p all -t 0 -p all>')
 required = parser.add_argument_group()
 optional = parser.add_argument_group()
 required.add_argument('-i', '--input', metavar = '[input.vcf]', help = 'vcf file', required = True)
 required.add_argument('-g', '--genome', metavar = '[genome name]', help = 'genome name', required = True)
-required.add_argument('-p', '--process', metavar = '[process]', help = 'start from the stage', default='all',type=str)
-required.add_argument('-t', '--tmp', metavar = '[tmp dir]', help = 'make a tmp dir', default='0',type=str)
+required.add_argument('-p', '--process', metavar = '[process]', help = 'all,normal,sort,clear', default='all',type=str)
+required.add_argument('-t', '--tmp', metavar = '[tmp dir]', help = '0/1', default='0',type=str)
 args = parser.parse_args()
 
 genome=args.genome
