@@ -151,6 +151,9 @@ def clear_vcf(filename,genome):
         os.system(cmd_0)
         #cmd_alt='cat error'
         #os.system(cmd_alt)
+        size = os.path.getsize('error')
+        if size == 0:
+            break
         with open('error','r') as f:
             lines = f.readlines()
             last_line=lines[-1]
@@ -181,7 +184,7 @@ def check_vcf(filename,genome):
         reduce_vcf(filename)
         clear_vcf(filename,genome)
         test_again_filename=filename+'.sort.reduce.vcf'
-        cmd_again = 'vg construct -r {} -v {} 1>test.vg 2>error'.format(genome,filename)
+        cmd_again = 'vg construct -r {} -v {} 1>test.vg 2>error'.format(genome,test_again_filename)
         os.system(cmd_again)
         size = os.path.getsize('error')
         if size == 0:
